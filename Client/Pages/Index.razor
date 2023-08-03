@@ -1,0 +1,38 @@
+﻿@page "/"
+@using BlazorTestModel.Shared
+
+<PageTitle>Directors letter test</PageTitle>
+
+<p>This app contains test component and data interactions for Directors Letter.</p>
+
+<MudText Typo="Typo.h2">Email table</MudText>
+<MudTable Items="@_viewModel.EmailLetters" Hover="true" OnRowClick="EmailRowClick" T="DirectorsLetter">
+    <HeaderContent>
+        <MudTh>Id</MudTh>
+        <MudTh>Name</MudTh>
+        <MudTh>Email</MudTh>
+        <MudTh>Action</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Id">@context.Id</MudTd>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="Email">@context.Email</MudTd>
+        <MudTd DataLabel="Action">...</MudTd>
+    </RowTemplate>
+</MudTable>
+<MudDivider />
+<MudText Typo="Typo.h2">Letter table</MudText>
+<MudTable Items="@_viewModel.PostalLetters" Hover="true">
+    <HeaderContent>
+        <MudTh>Id</MudTh>
+        <MudTh>Name</MudTh>
+        <MudTh>Address</MudTh>
+        <MudTh>Action</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Id">@context.Id</MudTd>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="Email">@context.PostalAddress</MudTd>
+        <MudTd DataLabel="Action">...</MudTd>
+    </RowTemplate>
+</MudTable>

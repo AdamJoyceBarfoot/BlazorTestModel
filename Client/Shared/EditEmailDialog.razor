@@ -1,0 +1,14 @@
+﻿<MudDialog>
+    <DialogContent>
+        <MudPaper>
+            <MudTextField T="string"
+                          Label="Email"
+                          Variant="Variant.Outlined"
+                          @bind-Value="_model.Email"/>
+        </MudPaper>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" OnClick="Submit">Ok</MudButton>
+    </DialogActions>
+</MudDialog>
